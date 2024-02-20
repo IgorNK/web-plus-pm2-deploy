@@ -14,9 +14,11 @@ const app = express();
 mongoose.connect(DB_ADDRESS);
 
 // Только для локальных тестов. Не используйте это в продакшене
-const allowList = ['http://kpd.igornk.nomoredomainswork.ru', 'https://kpd.igornk.nomoredomainswork.ru'];
-const corsOptions: cors.CorsOptions = {
-  origin: allowList
+const corsOptions = {
+	origin: ['https://kpd.igornk.nomoredomainswork.ru'],
+	allowedHeaders: ["Content-Type", "Authorization", "Access-Controll-Allow-Methods", "Access-Control-Request-Headers"],
+	credentials: true,
+	enablePreflight: true
 };
 app.use(cors(corsOptions));
 app.use(express.json());
