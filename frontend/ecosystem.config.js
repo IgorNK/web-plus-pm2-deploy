@@ -10,7 +10,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'https://github.com/IgorNK/web-plus-pm2-deploy',
       path: DEPLOY_PATH,
-      'post-deploy': 'npm i ./frontend && npm --prefix ./frontend run build',
+      'post-deploy': 'npm --prefix ./frontend i && npm --prefix ./frontend run build',
     },
   },
 }
