@@ -24,6 +24,11 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use('/crash-test', () => {
+	setTimeout(() => {
+		throw new Error("Сервер сейчас упадет");
+	}, 0);
+});
 app.use(routes);
 app.use(errors());
 app.use(errorHandler);
