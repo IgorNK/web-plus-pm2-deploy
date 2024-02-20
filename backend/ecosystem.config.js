@@ -5,7 +5,7 @@ const { DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF = 'origin/master', } =
 module.exports = {
   apps : [{
     name: 'api-service',
-    script: './dist/app.js',
+    script: '${DEPLOY_PATH}/current/backend/dist/app.js',
   }],
   deploy: {
     production: {
