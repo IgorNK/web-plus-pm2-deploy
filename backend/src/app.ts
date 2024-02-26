@@ -15,7 +15,7 @@ mongoose.connect(DB_ADDRESS);
 
 // Только для локальных тестов. Не используйте это в продакшене
 const corsOptions = {
-	origin: ['https://kpd.igornk.nomoredomainswork.ru'],
+	origin: ['https://mesto.igornk.nomoredomainswork.ru'],
 	allowedHeaders: ["Content-Type", "Authorization", "Access-Controll-Allow-Methods", "Access-Control-Request-Headers"],
 	credentials: true,
 	enablePreflight: true
