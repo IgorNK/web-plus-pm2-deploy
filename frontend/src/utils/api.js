@@ -139,7 +139,7 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api('https://api.kpd.igornk.nomoredomainswork.ru');
+  const api = new Api('https://api.mesto.igornk.nomoredomainswork.ru');
   
   export default api;
   
